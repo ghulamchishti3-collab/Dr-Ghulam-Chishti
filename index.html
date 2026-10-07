@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Homoeo Dr. Ghulam Chishti | DHMS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f2faf6;
+            color: #222;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #087f5b;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #b8f2d5;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #e8fff4, #ffffff);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            color: #087f5b;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h2 {
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: #087f5b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #055d43;
+        }
+
+        /* DOCTOR CARD */
+        .doctor-card {
+            width: 300px;
+            height: 330px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .doctor-icon {
+            width: 120px;
+            height: 120px;
+            background: #087f5b;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .doctor-card h2 {
+            color: #087f5b;
+        }
+
+        .doctor-card p {
+            margin-top: 8px;
+            color: #666;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #087f5b;
+            font-size: 34px;
+            margin-bottom: 40px;
+        }
+
+        /* ABOUT */
+        .about {
+            background: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .service-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #087f5b;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #087f5b;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            font-size: 19px;
+            margin: 12px;
+        }
+
+        .phone {
+            font-size: 26px !important;
+            font-weight: bold;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 30px;
+            background: white;
+            color: #087f5b;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #064d38;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* MOBILE */
+        @media(max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .doctor-card {
+                width: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Dr. Ghulam Chishti</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <h1>Homoeo Dr. Ghulam Chishti</h1>
+
+        <h2>DHMS | Homoeopathic Physician</h2>
+
+        <p>
+            Professional homoeopathic consultation and
+            patient case management.
+        </p>
+
+        <a href="#contact" class="btn">
+            Contact Doctor
+        </a>
+
+    </div>
+
+
+    <div class="doctor-card">
+
+        <div class="doctor-icon">
+            👨‍⚕️
+        </div>
+
+        <h2>Dr. Ghulam Chishti</h2>
+
+        <p>DHMS</p>
+
+        <p>Homoeopathic Physician</p>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2 class="section-title">
+        About Doctor
+    </h2>
+
+    <p>
+        Welcome to the official professional page of
+        Homoeo Dr. Ghulam Chishti, DHMS.
+        This website provides information about
+        homoeopathic consultation and patient
+        case management services.
+    </p>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <h2 class="section-title">
+        Our Services
+    </h2>
+
+    <div class="services">
+
+        <div class="service-card">
+            <div class="icon">🩺</div>
+            <h3>Consultation</h3>
+            <p>
+                Professional patient consultation
+                and case assessment.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <div class="icon">📋</div>
+            <h3>Patient Cases</h3>
+            <p>
+                Organized patient case records
+                and history management.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <div class="icon">📚</div>
+            <h3>Mind Repertory</h3>
+            <p>
+                Digital organization of repertory
+                symptoms and remedies.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Contact Doctor
+    </h2>
+
+    <p>Homoeo Dr. Ghulam Chishti</p>
+
+    <p>DHMS</p>
+
+    <p class="phone">
+        📞 0341-7622212
+    </p>
+
+    <a
+        href="tel:03417622212"
+        class="contact-btn">
+        Call Now
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 Homoeo Dr. Ghulam Chishti • DHMS
+
+</footer>
+
+</body>
+</html>
